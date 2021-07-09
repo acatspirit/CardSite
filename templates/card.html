@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %} {{ card['title'] }} {% endblock %}</h2>
+    <p>{{ card['content'] }}</p>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>{% block title %} Pick a card, any card! {% endblock %}</h1>
+
+{% for card in cards %}
+    <a href="{{ url_for('card', card_id=card['id']) }}">
+        <h2>{{ card['title'] }}</h2>
+    </a>
+    <hr>
+
+{% endfor %}
+{% endblock %}

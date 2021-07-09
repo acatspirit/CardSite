@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to CardSite {% endblock %}</h1>
+    
+    {% for card in cardL %}
+        <a href = "/cardSelect/{{card['suit']}}">{{card['suit']}}</a>
+        <!--<a href="{{ url_for('cardSelect', suit = card['suit']) }}"><h2>{{ card['suit'] }}</h2></a>-->
+    {% endfor %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+    <a href="{{ url_for('cardSelect')}}">
+        <h2>Diamonds</h2>
+    </a>
+    <a href="{{ url_for('cardSelect')}}">
+        <h2>Hearts</h2>
+    </a>
+    <a href="{{ url_for('cardSelect')}}">
+        <h2>Spades</h2>
+    </a>
+    <a href="{{ url_for('cardSelect')}}">
+        <h2>Clubs</h2>
+    </a>
+-->
+
